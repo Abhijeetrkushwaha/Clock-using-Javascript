@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+  background: url('./images/black-laptop-on-bed-3568792.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#clockphase1 {
+  font-size: 8rem;
+
+  margin: 0 1rem;
+  height: 100px;
+  color: #fafafa;
+  padding: 10px 50px;
+  text-align: center;
+  line-height: 100px;
+}
+
+#clockphase2 {
+  font-size: 4rem;
+  margin: 0 1rem;
+  height: 100px;
+  color: #fafafa;
+  padding: 10px 50px;
+  text-align: center;
+  line-height: 100px;
+}
+@media (max-width: 768px) {
+  #clockphase1 {
+    font-size: 6rem;
+    padding: 0;
+  }
+  #clockphase2 {
+    font-size: 3rem;
+    max-width: 100%;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 426px) {
+  #clockphase1 {
+    font-size: 5rem;
+    padding: 0;
+  }
+  #clockphase2 {
+    font-size: 2rem;
+    max-width: 100%;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 330px) {
+  #clockphase1 {
+    font-size: 4rem;
+  }
+  #clockphase2 {
+    font-size: 1.8rem;
+  }
+}

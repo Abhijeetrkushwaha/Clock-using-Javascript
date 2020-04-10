@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Clock</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="container">
+		<div id="clockphase1"></div>
+		<div id="clockphase2"></div>
+	</div>
+
+	<script type="text/javascript">
+		const showClock = () => {
+			const clockphase1 = document.getElementById('clockphase1');
+			const clockphase2 = document.getElementById('clockphase2');
+			let currDate = new Date();
+
+			let h = currDate.getHours();
+			let d = currDate.getDay();
+			let mm = currDate.getMonth();
+			let dd = currDate.getDate();
+			let m = currDate.getMinutes();
+			let s = currDate.getSeconds(); 
+			var t;
+
+			m = m < 10 ? "0" + m : m;
+			s = s < 10 ? "0" + s : s;
+			t = h < 12 ? "am" : "pm";
+			var day =["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+			var month =["January", "February", "March", "April", " May", "June", "July", "August", "September", "October", "November", "December"];
+
+
+
+			 clockphase1.innerHTML = h + ":" + m + ":" + s ;
+			 clockphase2.innerHTML = day[d] + ", " + dd + " " + month[mm];
+
+			setTimeout(showClock, 1000);
+		}
+		showClock();
+		console.log(showClock())
+	</script>
+
+</body>
+</html>
